@@ -5,28 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1 INPUT 1 OUTPUT TEMPLATE</title>
     <style>
+        body{
+            background-color: rgb(63, 135, 137);
+            color: white;
+            align-items: center;
+    
+            
+
+        }
 
         /* STYLE FOR THE INPUT FIELD */
         #charInput {
+scale: 5;
+align-items: center;
+
 
         }
 
         /* STYLE FOR THE SUBMIT BUTTON */
         #submitButton {
+    font-family:Arial, Helvetica, sans-serif;
+            display: inline-block;
+            margin-top: 2em;
+             padding: 15px 25px;
+            font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #1a284f;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px #ffffff;
 
         }
 
+            
+
         /* STYLE FOR THE IMAGE */
+
         #displayedImage {
-            display: none; /* This line is mandatory */
+            display: none; 
+            margin: 2em;
+
+        }
+
+        p{
+            font-size: 5rem;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
         }
     </style>
 </head>
 <body>
+    <p> Enter an alphabet from "A" to "L"!</p>
 
-    
     <!-- INPUT FIELD FOR 1 CHARACTER -->
     <input type="text" id="charInput" maxlength="1">
+
 
     <!-- BUTTON TO DISPLAY IMAGE -->
     <button onclick="displayImage()" id="submitButton">Show Image</button>
@@ -40,32 +77,19 @@
         // Array of images
         // DIRECTIONS: UPDATE THE URLS WITH THE RELATIVE LINKS OF YOUR IMAGES
         const images = [
-            "https://via.placeholder.com/300/00FF00/FFFFFF?text=A", //A
-            "https://via.placeholder.com/300/00FF00/FFFFFF?text=B", //B
-            "https://via.placeholder.com/300/0000FF/FFFFFF?text=C", //C
-            "https://via.placeholder.com/300/FFFF00/000000?text=D", //D
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=E", //E
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=F", //F
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=G", //G
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=H", //H
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=I", //I
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=J", //J
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=K", //K
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=L", //L
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=M", //M
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=N", //N
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=O", //O
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=P", //P
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=Q", //Q
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=R", //R
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=S", //S
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=T", //T
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=U", //U
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=V", //V
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=W", //W
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=X", //X
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=Y", //Y
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=Z"  //Z
+            "images/Screenshot 2025-02-25 at 11.15.39.png", //A
+            "images/Screenshot 2025-02-25 at 11.16.05.png", //B
+            "images/Screenshot 2025-02-25 at 11.16.21.png", //C
+            "images/Screenshot 2025-02-25 at 11.16.41.png", //D
+            "images/Screenshot 2025-02-25 at 11.17.13.png", //E
+            "images/Screenshot 2025-02-25 at 11.17.59.png", //F
+            "images/Screenshot 2025-02-25 at 11.18.15.png", //G
+            "images/Screenshot 2025-02-25 at 11.18.53.png", //H
+            "images/Screenshot 2025-02-25 at 11.19.29.png", //I
+            "images/Screenshot 2025-02-25 at 11.19.42.png", //J
+            "images/Screenshot 2025-02-25 at 11.20.01.png", //K
+            "images/Screenshot 2025-02-25 at 11.20.25.png", //L
+
         ];
 
         function displayImage() {

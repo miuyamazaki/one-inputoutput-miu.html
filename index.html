@@ -16,28 +16,14 @@
 
         /* STYLE FOR THE INPUT FIELD */
         #charInput {
-scale: 5;
-align-items: center;
+
 
 
         }
 
         /* STYLE FOR THE SUBMIT BUTTON */
         #submitButton {
-    font-family:Arial, Helvetica, sans-serif;
-            display: inline-block;
-            margin-top: 2em;
-             padding: 15px 25px;
-            font-size: 24px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #1a284f;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 4px #ffffff;
+
 
         }
 
@@ -47,18 +33,24 @@ align-items: center;
 
         #displayedImage {
             display: none; 
-            margin: 2em;
+            margin: auto;
+            width: 30%;
+
 
         }
 
         p{
             font-size: 5rem;
-            text-align: center;
+            text-align: Left;
+            padding: 1em;
+            margin-right: 10em;
             font-family: Arial, Helvetica, sans-serif;
         }
+
     </style>
 </head>
 <body>
+    <div>
     <p> Enter an alphabet from "A" to "L"!</p>
 
     <!-- INPUT FIELD FOR 1 CHARACTER -->
@@ -67,18 +59,20 @@ align-items: center;
 
     <!-- BUTTON TO DISPLAY IMAGE -->
     <button onclick="displayImage()" id="submitButton">Show Image</button>
-
+</div>
+<div>
     <!-- IMAGE TO DISPLAY -->
     <img id="displayedImage" src="" alt="Displayed Image">
 
+</div>
 
     <!-- Image Display Script Below -->
     <script>
         // Array of images
         // DIRECTIONS: UPDATE THE URLS WITH THE RELATIVE LINKS OF YOUR IMAGES
         const images = [
-            "images/Screenshot 2025-02-25 at 11.15.39.png", //A
-            "images/Screenshot 2025-02-25 at 11.16.05.png", //B
+            "images/apple.png", //A
+            "images/banana.png", //B
             "images/Screenshot 2025-02-25 at 11.16.21.png", //C
             "images/Screenshot 2025-02-25 at 11.16.41.png", //D
             "images/Screenshot 2025-02-25 at 11.17.13.png", //E

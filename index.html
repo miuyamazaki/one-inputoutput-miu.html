@@ -1,29 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+        </style>
+        
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1 INPUT 1 OUTPUT TEMPLATE</title>
     <style>
-        body{
-            background-color: rgb(63, 135, 137);
-            color: white;
-            align-items: center;
-    
-            
 
+        body{
+            background-image: url('images/backgroung.jpg'); /* Replace with your image path */
+            background-size: 100%; /* Ensures image covers the entire background */
+            background-position: auto; /* Centers the image */
+            background-repeat: no-repeat; /* Prevents tiling */
+            color: rgb(32, 51, 114);
+            align-items: center;
         }
 
         /* STYLE FOR THE INPUT FIELD */
         #charInput {
-
+            margin-left: 5em;
+            width: 10em;
+            height: 5em;
+            background-color: rgb(255, 142, 3);
 
 
         }
 
         /* STYLE FOR THE SUBMIT BUTTON */
         #submitButton {
-
+            width: 5em;
+            height: 5em;
 
         }
 
@@ -33,25 +42,30 @@
 
         #displayedImage {
             display: none; 
-            margin: auto;
-            width: 30%;
-
+            margin-left: 47em;
+    width: 30%;
+    margin-top: -26em;
 
         }
 
         p{
-            font-size: 5rem;
-            text-align: Left;
-            padding: 1em;
-            margin-right: 10em;
-            font-family: Arial, Helvetica, sans-serif;
+            font-size: 4rem;
+            text-align: left;
+           margin-left: 1em;
+           margin-right: 15em;
+           margin-top: 2em;
+
+            font-family: "Paytone One", serif;
+  font-weight: 400;
+  font-style: normal;
         }
 
     </style>
 </head>
+
 <body>
     <div>
-    <p> Enter an alphabet from "A" to "L"!</p>
+    <p> Enter an alphabet from "A" to "Z" and shop your ingredients!</p>
 
     <!-- INPUT FIELD FOR 1 CHARACTER -->
     <input type="text" id="charInput" maxlength="1">
@@ -73,16 +87,16 @@
         const images = [
             "images/apple.png", //A
             "images/banana.png", //B
-            "images/Screenshot 2025-02-25 at 11.16.21.png", //C
+            "images/chicken.png", //C
             "images/Screenshot 2025-02-25 at 11.16.41.png", //D
             "images/Screenshot 2025-02-25 at 11.17.13.png", //E
-            "images/Screenshot 2025-02-25 at 11.17.59.png", //F
+            "images/falafel.png", //F
             "images/Screenshot 2025-02-25 at 11.18.15.png", //G
             "images/Screenshot 2025-02-25 at 11.18.53.png", //H
             "images/Screenshot 2025-02-25 at 11.19.29.png", //I
             "images/Screenshot 2025-02-25 at 11.19.42.png", //J
             "images/Screenshot 2025-02-25 at 11.20.01.png", //K
-            "images/Screenshot 2025-02-25 at 11.20.25.png", //L
+            "images/lettuce.png", //L
 
         ];
 
@@ -102,7 +116,7 @@
                 */
 
                 // IF INVALID INPUT IS ENTERED, DISPLAY ALTERNATE IMAGE
-                imgElement.src = "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmtkdnJhMXY4Njd1cXR3MTM3MW1nMzZ1NXNhNHlhOHA0MWF2dDUzdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/13dRJkj5wgKq9q/giphy.gif"
+                imgElement.src = "images/money.png"
                 imgElement.style.display = "block";
             }
         }

@@ -28,27 +28,39 @@
             color: white;
             font-family: "Paytone One", serif;
             font-size: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 0.5em;
+            border: 2px solid white; /* Adds a white border */
             text-align: center;
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
 
+#charInput:hover {
+    background-color: rgb(255, 100, 0); /* Slightly darker orange */
 
-        }
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow */
+}
 
         /* STYLE FOR THE SUBMIT BUTTON */
         #submitButton {
-            width: 8em;
+            width: 7em;
+            margin-left: 1em;
             height: 3em;
             font-family: "Paytone One", serif;
             font-size: 32px;
             color: white;
-            background-color:rgb(32, 51, 114);
+            border: 2px solid white; /* Adds a white border */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 0.5em;
+            background-color:rgb(44, 70, 154);
   font-weight: 200;
   font-style: normal;
     transition: all 0.3s ease; /* Adds a smooth transition effect */
 }
 
 #submitButton:hover {
-    background-color: rgb(15, 24, 55);
-    transform: scale(1.05); /* Slightly enlarges the button */
+    background-color: rgb(6, 20, 69);
+
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
 }
 
@@ -59,11 +71,13 @@
 
         #displayedImage {
             display: none; 
-            margin-left: 47em;
-    width: 30%;
-    margin-top: -27em;
-
+            width: 30%;
+            position: absolute;
+            top: 50%; 
+            right: 15%;
+            transform: translateY(-50%);
         }
+        
 
         p{
             font-size: 4rem;
@@ -77,9 +91,36 @@
   font-style: normal;
         }
 
+        footer{
+            font-family: "Paytone One", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(255, 123, 0);
+  font-size: 15px;
+  text-align: center;
+  margin-top: 6em;
+
+}
 
 
+@keyframes fall {
+    0% {
+        transform: translateY(-50vh) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
 
+.money-emoji {
+    position: absolute;
+    top: 0;
+    font-size: 2rem; /* Adjust the size of the emoji */
+    opacity: 1;
+    animation: fall 1.5s ease-out forwards;
+}
 
         
     </style>
@@ -87,7 +128,7 @@
 
 <body>
     <div>
-    <p> Enter an alphabet from "A" to "Z" and shop your ingredients!</p>
+    <p> Enter an alphabet from "a" to "z" and shop your ingredients!</p>
 
     <!-- INPUT FIELD FOR 1 CHARACTER -->
     <input type="text" id="charInput" maxlength="1">
@@ -107,19 +148,32 @@
         // Array of images
         // DIRECTIONS: UPDATE THE URLS WITH THE RELATIVE LINKS OF YOUR IMAGES
         const images = [
-            "images/apple.png", //A
+            "images/abocado.webp", //A
             "images/banana.png", //B
             "images/chicken.png", //C
             "images/daikon.webp", //D
             "images/eggs.png", //E
-            "images/falafel.png", //F
+            "images/falafel.webp", //F
             "images/garlic.png", //G
-            "images/Screenshot 2025-02-25 at 11.18.53.png", //H
-            "images/Screenshot 2025-02-25 at 11.19.29.png", //I
-            "images/Screenshot 2025-02-25 at 11.19.42.png", //J
-            "images/Screenshot 2025-02-25 at 11.20.01.png", //K
+            "images/ham.png", //H
+            "images/italian parseley.webp", //I
+            "images/jam.png", //J
+            "images/kimchi.png", //K
             "images/lettuce.png", //L
-
+            "images/macandcheese.png",//M
+            "images/nuts.png", //N
+            "images/oatmilk.png", //o
+            "images/parmesian chhese.webp", //p
+            "images/quinoa.png", //q
+            "images/redonions.png", //r
+            "images/sausage.webp", //S
+            "images/tofu.png", //t
+            "images/udon.webp", //u
+            "images/vegemite.png", //v
+            "images/waffles.png", //w
+            "images/xiao.jpg", //x
+            "images/yogurt.png", //y
+            "images/zucchini.png", //z
         ];
 
         function displayImage() {
@@ -145,4 +199,8 @@
     </script>
 
 </body>
+<footer>
+    Designed and coded by Miu Yamazaki :)
+</footer>
+
 </html>
